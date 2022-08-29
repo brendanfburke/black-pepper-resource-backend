@@ -10,7 +10,7 @@ const { PORT = 4000, MONGODB_URI } = process.env;
 
 require('./config/db.connection')
 
-app.use(cors());
+app.use(cors('*'));
 app.use(morgan("dev")); 
 app.use(express.json()); 
 
